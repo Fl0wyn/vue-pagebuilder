@@ -2,10 +2,10 @@
 
 > 🚧 Work In Progress
 
-A visual page builder for Vue 3 (based on [dashpilot/vue-pagebuilder](https://github.com/dashpilot/vue-pagebuilder))
+A visual page builder for Vue 3 based on [dashpilot/vue-pagebuilder](https://github.com/dashpilot/vue-pagebuilder)
 
 ### Démo
-https://vue-pagebuilder-eight.vercel.app
+https://vue-pagebuilder-gold.vercel.app
 
 ### Setup
 
