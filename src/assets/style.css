@@ -1,0 +1,8 @@
+.editable {
+  border: var(--tblr-border-width) var(--tblr-border-style) transparent;
+  cursor: pointer;
+}
+
+.editable:hover {
+  border: var(--tblr-border-width) var(--tblr-border-style) rgba(4, 32, 69, 0.14) !important;
+}
