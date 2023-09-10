@@ -4,6 +4,11 @@ import { ref, onMounted } from "vue";
 const props = defineProps(["mykey"]);
 const emits = defineEmits(["image"]);
 
+/* 
+TODO
+
+https://vueuse.org/core/useObjectUrl/ */
+
 const choose = () => document.getElementById("fileInput").click();
 
 onMounted(() => {

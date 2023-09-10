@@ -7,8 +7,10 @@ import { useStore } from '@/stores/index'
 import { ref, onMounted, onUpdated } from "vue";
 
 import { useWindowSize, useBreakpoints, breakpointsBootstrapV5 } from '@vueuse/core'
+
 // https://vueuse.org/core/useBreakpoints/
 const breakpoints = useBreakpoints(breakpointsBootstrapV5)
+
 // https://vueuse.org/core/useWindowSize/
 const { width, height } = useWindowSize()
 

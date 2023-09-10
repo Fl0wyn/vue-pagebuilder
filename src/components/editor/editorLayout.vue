@@ -4,7 +4,7 @@ const entries = useStore().entries
 const layouts = useStore().layouts
 
 import { ref, onMounted, computed } from "vue";
-import Add from "@/components/editor/addContent.vue";
+import Add from "@/components/editor/editorAdd.vue";
 import Image from "@/components/editor/editorImageResize.vue";
 
 const item = ref(false);

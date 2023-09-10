@@ -1,8 +1,6 @@
 import { defineStore } from 'pinia'
 import { useStorage } from '@vueuse/core'
 
-// https://vueuse.org/core/useWindowFocus/
-
 export const useStore = defineStore('app', {
   state: () => ({
     title: "Vue Page Builder",
@@ -20,12 +18,6 @@ export const useStore = defineStore('app', {
     log() {
       console.table(this.entries)
     },
-    getAllEntries() {
-      return this.entries
-    },
-    entriesEmpty() {
-      return this.entries.length <= 0
-    }
   },
   actions: {
     add(entries) {
@@ -45,7 +37,8 @@ export const useStore = defineStore('app', {
       console.trace("TODO")
     },
     preview() {
-      window.open(window.location.href + '#preview', '_blank')
+      window.location.hash = ""
+      window.open(window.location.href + 'preview', '_blank')
     }
   },
 })

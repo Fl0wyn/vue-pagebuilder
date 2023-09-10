@@ -7,7 +7,7 @@ const getImage = (layout) => new URL(`../../assets/images/preview-${layout}.png`
 <template>
   <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasEnd-add">
     <div class="offcanvas-header">
-      <h2 class="offcanvas-title">Add content</h2>
+      <h2 class="offcanvas-title">Add</h2>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
     </div>
     <div class="offcanvas-body">
