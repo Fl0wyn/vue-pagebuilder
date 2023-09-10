@@ -95,6 +95,19 @@ onMounted(() => {
     </button>
   </div> -->
 
+  import { computed } from "vue";
+const props = defineProps({ modelValue: String });
+const emits = defineEmits(["update:modelValue"]);
+const value = computed({
+  get() { return props.modelValue },
+  set(value) { emits("update:modelValue", value) },
+});
+@click="$emit('valider')"
+@valider="valider(item)"
+//
+<input v-model="value" />
+
+
   <transition name="slide-right">
     <div class="editor slidein-right" v-if="item" spellcheck="false">
       <div class="editor-header">

@@ -1,11 +1,13 @@
 <script setup>
-const props = defineProps(["item", "editable"]);
+const props = defineProps(["item"]);
+import { useStore } from '@/stores/index'
+
 const layout = 'one'
 </script>
 
 <template>
-  <section v-if="item.layout === layout" :id="item.id" :class="{ 'editable': editable }, 'py-2'"
-    data-fields="title=txt&amp;body=rte&amp;image=img&amp;youtube_url=vid">
+  <section v-if="item.layout === layout" :id="item.id" :class="'pointer py-4', { 'editable': useStore().editable }"
+    data-bs-toggle="offcanvas" href="#offcanvasEnd-Edit">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-md-6">

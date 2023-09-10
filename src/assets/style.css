@@ -1,3 +1,7 @@
+.pointer {
+  cursor: pointer;
+}
+
 .editable {
   border: var(--tblr-border-width) var(--tblr-border-style) transparent;
   cursor: pointer;

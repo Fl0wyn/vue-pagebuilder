@@ -5,12 +5,14 @@ export const useStore = defineStore('app', {
   state: () => ({
     title: "Vue Page Builder",
     editable: true,
+    currentId: null,
     layouts: ["one", "two"],
     entries: useStorage('entries', [
       {
         id: "26c33e4a",
         layout: "one",
         title: "section 1",
+        link: "https://example.com/",
       },
     ])
   }),
@@ -30,15 +32,11 @@ export const useStore = defineStore('app', {
       this.entries.unshift(newAdd);
       this.log
     },
-    remove(id) {
-      this.entries.splice(this.entries.findIndex((x) => x.id === id), 1)
+    update(id) {
+      console.trace("TODO", id)
     },
-    save() {
-      console.trace("TODO")
+    remove() {
+      this.entries.splice(this.entries.findIndex((x) => x.id === this.currentId), 1)
     },
-    preview() {
-      window.location.hash = ""
-      window.open(window.location.href + 'preview', '_blank')
-    }
   },
 })

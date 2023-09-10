@@ -25,6 +25,9 @@ const breakpoint = ref()
 
 onMounted(() => checkBreakpoint());
 onUpdated(() => checkBreakpoint());
+
+const save = () => console.trace("TODO")
+const preview = () => window.open(window.location.origin + '/preview', '_blank')
 </script>
 
 <template>
@@ -37,15 +40,15 @@ onUpdated(() => checkBreakpoint());
       <div class="navbar-nav flex-row order-md-last">
         <div class="nav-item d-none d-md-flex me-3">
           <div class="btn-list">
-            <button class="btn" data-bs-toggle="offcanvas" href="#offcanvasEnd-add">
+            <button class="btn" data-bs-toggle="offcanvas" href="#offcanvasEnd-Add">
               <icon-add />
               Add
             </button>
-            <button class="btn" @click="useStore().save">
+            <button class="btn" @click="save">
               <icon-save />
               Save
             </button>
-            <button class="btn" @click="useStore().preview">
+            <button class="btn" @click="preview">
               <icon-preview />
               Preview
             </button>
